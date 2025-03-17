@@ -1,0 +1,136 @@
+body {
+    margin: 1% 1%;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+p {
+    font-size: 16px;
+}
+
+a {
+    display: block;
+}
+
+b {
+    font-weight: 800;
+    font-size: inherit;
+}
+
+#nameMake {
+    display: none;
+}
+
+#gameGame {
+    word-wrap: break-word;
+}
+
+#gameT {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#gameT tr {
+    display: table-row;
+}
+
+#gameT td {
+    display: table-cell;
+    width: 50%;
+    border: 1px solid black;
+}
+
+#shop {
+    vertical-align: top;
+    height: 200px;
+
+    position: relative;
+}
+
+#shop a {
+    padding-left: 2%;
+    text-decoration: underline;
+    color: blue;
+    margin: 0 30px;
+}
+
+#talkOpts {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    margin-bottom: 1%;
+}
+
+#shop a:hover {
+    cursor: pointer;
+}
+
+#shop2 {
+    vertical-align: top;
+}
+
+#fishShop {
+    margin: 1%;
+}
+
+#shopkeeper0 {
+    margin-bottom: 0;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+
+    font-weight: 800;
+}
+
+#shopkeeper {
+    margin: 1%;
+}
+
+#gameArea {
+    vertical-align: bottom;
+
+    height: 450px;
+}
+
+#shopItems {
+    padding-left: 5%;
+}
+
+#shopItems a {
+    text-decoration: underline;
+    color: blue;
+    margin: 0 30px;
+}
+
+#shopItems a:hover {
+    cursor: pointer;
+}
+
+#shopItems p {
+    margin: 5px 0;
+}
+
+.mobile {
+    display: none;
+}
+
+#talkOpts a {
+    display: inline-block;
+}
+
+@media (max-width: 850px) {
+    #gameT td {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .mobile {
+        display: block;
+    }
+}

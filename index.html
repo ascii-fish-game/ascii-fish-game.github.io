@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ascii fish</title>
+</head>
+<body>
+    <h1 style="font-size: 24px;">ascii fish</h1>
+    <h2 id="Gscore"></h2>
+    <h2 id="Gmoney"></h2>
+    <h2 id="Gbait"></h2>
+    <h2 id="Gbag"></h2>
+
+    <br>
+
+    <table id="gameT">
+        <tbody>
+            <tr>
+                <td id="shop">
+                    <p id="shopkeeper0" class="top">shopkeeper:</p>
+                    <p id="shopkeeper" class="top">:D hi i'm the shopkeeper!</p>
+                    <div id="talkOpts">
+                        <div id="nameMake">
+                            <label for="userInput">what's your name?</label>
+                            <input type="text" id="userInput" placeholder="name">
+                            <button onclick="tutorialName()">submit</button>
+                        </div>
+                        <a onclick="talkShopkeeper()" class="bottom" id="talkE">talk</a>
+                        <a onclick="saveGame(true)" class="bottom" id="saveGameE">save game</a>
+                    </div>
+                </td>
+                <td id="gameArea" rowspan="2">
+                    <div style="font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:14px;white-space: pre;background-color: #ffffff; color: #000000;"><div>                         ''''''''               </div><div>                      |'''       ''''''         </div><div>                     |'               '''''     </div><div>                    |'                    ''''  </div><div>                   |'                        ''▄</div><div>                  |'                           ▄</div><div>                 |'                             </div><div>               ||'                              </div><div>              | '                               </div><div>             |''                                </div><div>            |'                                  </div><div>           |'                                   </div><div>          |'                                    </div><div>         |'                                     </div><div>        |'                                      </div><div>       |'                                       </div><div>      |'                                        </div><div>     |║                                         </div><div>   ||║║                                         </div><div>  |║║║║                                         </div><div> |                                              </div><div>|                                               </div></div>
+                </td>
+            </tr>
+            <tr>
+                <td id="shop2">
+                    <h3 id="fishShop">fish shop →</h3>
+                    <div id="shopItems">
+                        <p>essentials:</p>
+                        <a onclick="sellAllFish()">sell all fish</a>
+                        <a onclick="buyBait()">buy bait (1) [fb$3]</a>
+                        <a onclick="buyShopUpgrade()" id="upgradeShop"></a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="play">
+        <p id="fishAlert"></p>
+        <p id="timer"></p>
+        <p id="gameGame"></p>
+    </div>
+    <div class="mobile"><br><br><br><br><br><br><br><br><br><br><br><br></div>
+    <script src="./fish.js"></script>
+    <script src="logic.js"></script>
+</body>
+</html>

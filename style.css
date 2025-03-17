@@ -95,6 +95,8 @@ b {
     vertical-align: bottom;
 
     height: 450px;
+
+    font-size: 14px;
 }
 
 #shopItems {
@@ -124,13 +126,29 @@ b {
 }
 
 @media (max-width: 850px) {
+    * {
+        font-size: 12px;
+    }
+
     #gameT td {
         display: block;
         width: 100%;
+    }
+
+    #gameArea {
         height: auto;
+    }
+
+    #gameArea div {
+        font-size: 8px;
+        vertical-align: bottom;
     }
 
     .mobile {
         display: block;
+    }
+
+    #shop {
+        height: 200px;
     }
 }

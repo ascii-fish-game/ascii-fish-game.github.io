@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ascii fish &#9974; release notes</title>
+</head>
+<body>
+    <a style="font-size: 24px; display: inline; font-weight: 800;" href="./index.html">ascii fish</a><h2 style="display: inline;">&nbsp;&#9974; release notes</h2>
+    <h3 style="font-weight: 100; font-style: italic" id="fishNameT"></h3>
+    <div id="randomFish"></div>
+    <p>v0.0.2 (super-super alpha) - 2025-03-18</p>
+    <ul>
+        <li>added new upgrades (shop level 3)!</li>
+        <li>the <b>casino</b> is coming real soon... :(</li>
+        <li>added more shopkeeper dialogue</li>
+        <li>fixed some things... you know the drill</li>
+    </ul>
+    <p>v0.0.1 (super-super alpha) - 2025-03-16</p>
+    <ul>
+        <li>play the game, buy some bait, upgrade the shop, and catch some fish! AND MORE?!?!...</li>
+        <li>55 fish to catch (some might be too difficult to catch... for now)</li>
+        <li>6 rarities: trash, common, uncommon, rare, ???, and !?!?!?</li>
+        <li>1 shop level and 4 upgrades, but many more to come!</li>
+        <li>19 cool </li>
+        <li>.....did somebody say <b>casino</b>?!</li>
+        <li>thank you to <a style="display: inline-block;" href="https://www.asciiart.eu/image-to-ascii">ascii art archive</a>!</li>
+    </ul>
+
+    <script src="./fish.js"></script>
+    <script>
+        const randomFishE = document.getElementById("randomFish");
+        const fishNameTE = document.getElementById("fishNameT");
+
+        function randomizeFish() {
+            let randY = Math.floor(Math.random() * 10);
+            if (randY >= 8) {
+                potClass = "uncommon";
+            } else if (randY > 0) {
+                potClass = "common";
+            } else {
+                potClass = "trash";
+            }
+            let keys = Object.keys(fish[potClass]);
+            let randFish = keys[Math.floor(Math.random() * keys.length)];
+            randomFishE.innerHTML = fish[potClass][randFish].art;
+            fishNameTE.textContent = randFish;
+        }
+
+        window.onload = function() {
+            randomizeFish();
+        }
+
+        document.addEventListener("keydown", function(event) {
+            if (event.code === "Space") {
+                randomizeFish();
+            }
+        });
+
+        randomFishE.addEventListener("touchstart", function(event) {
+            randomizeFish();
+        });
+    </script>
+</body>
+</html>
